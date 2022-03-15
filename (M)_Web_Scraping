@@ -1,0 +1,32 @@
+#Web Scraping by Edin Destanovic
+
+#Install this ==> pip install beautifulsoup4
+#Also this ==> pip install requests
+
+#If you don't know how, go to Python file location,open Scripts folder, and from there open Command Prompt (CMD), and type in things above.
+
+import sys
+import time
+from bs4 import BeautifulSoup
+import requests
+
+try:
+        
+    page=requests.get('https://edindestanovic9.wordpress.com/')  #Put the link of your desired website                        
+    
+except Exception as e:                                   
+    error_type, error_obj, error_info = sys.exc_info()      
+    print ('ERROR FOR LINK:',url)                          
+    print (error_type, 'Line:', error_info.tb_lineno)     
+                                                 
+time.sleep(2)   
+soup=BeautifulSoup(page.text,'html.parser')
+links=soup.find_all('div',attrs={'class':'panel-content'})  #Put the attributes that you want to extract from the page
+
+page
+soup
+links
+
+for i in links:
+    print(i.text)
+    print("\n")

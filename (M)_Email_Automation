@@ -10,8 +10,8 @@ import smtplib
 #server = smtplib.SMTP('smtp.gmail.com', 587)
 server = smtplib.SMTP('smtp.gmail.com: 587')
 server.starttls()
-server.login('eddyclay88@gmail.com', 'shverszzjwbhugyy')
-server.sendmail('eddyclay88@gmail.com', #Here you put your gmail from which you are sending it
-				'eddyclay88@gmail.com', #Here you put receiver of the mail
+server.login('your_email@gmail.com', 'yourpassword')
+server.sendmail('your_email@gmail.com', #Here you put your gmail from which you are sending it
+				'receiver88@gmail.com', #Here you put receiver of the mail
 				'Dear Edin, This is to test if this Python email message works.' #Here is the text of your mail
 				)

@@ -1,0 +1,17 @@
+#Email Automation Bot by Edin Destanovic
+
+#In order for the program to work, you will have to "Allow less scure apps: ON" on your gmail account. 
+#If you are still confused visit this link: https://support.google.com/mail/?p=InvalidSecondFactor
+
+
+import smtplib
+
+
+#server = smtplib.SMTP('smtp.gmail.com', 587)
+server = smtplib.SMTP('smtp.gmail.com: 587')
+server.starttls()
+server.login('eddyclay88@gmail.com', 'shverszzjwbhugyy')
+server.sendmail('eddyclay88@gmail.com', #Here you put your gmail from which you are sending it
+				'eddyclay88@gmail.com', #Here you put receiver of the mail
+				'Dear Edin, This is to test if this Python email message works.' #Here is the text of your mail
+				)
